@@ -43,7 +43,7 @@ This framework allows you to do a lot of things, but most importantly, it will s
   s.source           = { :git => 'https://github.com/sbrighiu/SnapConstraints.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'SnapConstraints/Classes/**/*'
   
