@@ -22,8 +22,8 @@ pod "SnapConstraints"
 
 ## Author
 
-sbrighiu, sbrighiu@gmail.com
+Stefan M. Brighiu (SMBCheeky), sbrighiu@gmail.com
 
 ## License
 
-SnapConstraints is available under the MIT license. See the LICENSE file for more info.
+SnapConstraints is available under the Apache License 2.0 license. See the LICENSE file for more info.

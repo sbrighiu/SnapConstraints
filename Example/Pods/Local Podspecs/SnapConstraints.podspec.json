@@ -1,0 +1,22 @@
+{
+  "name": "SnapConstraints",
+  "version": "0.1.0",
+  "summary": "A short description of SnapConstraints.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/sbrighiu/SnapConstraints",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "sbrighiu": "sbrighiu@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/sbrighiu/SnapConstraints.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "SnapConstraints/Classes/**/*"
+}

@@ -1,0 +1,6 @@
+framework module SnapConstraints {
+  umbrella header "SnapConstraints-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,16 @@
+PODS:
+  - SnapConstraints (0.1.0)
+
+DEPENDENCIES:
+  - SnapConstraints (from `../`)
+
+EXTERNAL SOURCES:
+  SnapConstraints:
+    :path: ../
+
+SPEC CHECKSUMS:
+  SnapConstraints: d34d11daaf82c2eda4d48a8aced693fec7f3e73a
+
+PODFILE CHECKSUM: a7ad8284441fa9295d95d7d2058570d70c8e0199
+
+COCOAPODS: 1.2.1

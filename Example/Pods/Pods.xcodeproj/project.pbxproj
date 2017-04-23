@@ -1,0 +1,752 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1C8E1739F68245B267E3B80DDDDC04EA /* Pods-SnapConstraints_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A3CB77BB8883A4E73F741E63ADDDDAA /* Pods-SnapConstraints_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		27B98EC307F3BFD0249491ECFA866DBB /* SnapConstraints-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E711DF117882A34AD944DCC5A9D0A51 /* SnapConstraints-dummy.m */; };
+		37B5776669A1D4BE914134DDC1B19631 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		43788EF0392D7CD7203DD181279B5355 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		69D8A03C5FAF2453BA267963FB40DB16 /* SnapConstraints-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AC69F70842433397FFC134D6B90F662 /* SnapConstraints-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		86ED0BBC4F9C270FE9BDF4085197C1BD /* Pods-SnapConstraints_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 540898B4E415970E7DF22C708AFF4DDD /* Pods-SnapConstraints_Example-dummy.m */; };
+		A3B371CDE15B26896D5874F5B6293E82 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		A7AFF2AD1EAD730F00DDA367 /* SnapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AFF2A71EAD730F00DDA367 /* SnapManager.swift */; };
+		A7AFF2AE1EAD730F00DDA367 /* SnapConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AFF2A81EAD730F00DDA367 /* SnapConstraint.swift */; };
+		A7AFF2AF1EAD730F00DDA367 /* SnapConstraintType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AFF2A91EAD730F00DDA367 /* SnapConstraintType.swift */; };
+		A7AFF2B01EAD730F00DDA367 /* SnapLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AFF2AA1EAD730F00DDA367 /* SnapLog.swift */; };
+		A7AFF2B11EAD730F00DDA367 /* SnapMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AFF2AB1EAD730F00DDA367 /* SnapMask.swift */; };
+		A7AFF2B21EAD730F00DDA367 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AFF2AC1EAD730F00DDA367 /* UIView+Constraints.swift */; };
+		A9FAF87938B8183E563D0EAF678A9BC8 /* Pods-SnapConstraints_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 44527A759BF750817CFB185D56DD547C /* Pods-SnapConstraints_Tests-dummy.m */; };
+		CC3410F623F244AC23E9C877BD00364F /* Pods-SnapConstraints_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 059525320B0FF2CC428C319D0EF976EB /* Pods-SnapConstraints_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A760B498B159DA5306018370BDB3DEE1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AB7DF44781B795F0A54F6F70DA928B47;
+			remoteInfo = SnapConstraints;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0299A04AAE9C0B5760BB882B14EBF478 /* Pods-SnapConstraints_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SnapConstraints_Example.release.xcconfig"; sourceTree = "<group>"; };
+		059525320B0FF2CC428C319D0EF976EB /* Pods-SnapConstraints_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SnapConstraints_Tests-umbrella.h"; sourceTree = "<group>"; };
+		0760AFBF7B72441A4F95F57E8476B9D1 /* SnapConstraints.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SnapConstraints.modulemap; sourceTree = "<group>"; };
+		0C280DE9B38CC29252A2EFA42A731ED6 /* Pods-SnapConstraints_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SnapConstraints_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		1CD547C963FAF0D836500CCDC8EE25B1 /* Pods_SnapConstraints_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapConstraints_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		245C29BB8ED53D27DE9A333467107DF5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2483087AE688D4FCE5390E75DC356EFC /* Pods-SnapConstraints_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SnapConstraints_Tests.modulemap"; sourceTree = "<group>"; };
+		2AC69F70842433397FFC134D6B90F662 /* SnapConstraints-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapConstraints-umbrella.h"; sourceTree = "<group>"; };
+		30BEBFB4F14F5F7A1EF4FE08C1860443 /* Pods-SnapConstraints_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SnapConstraints_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		31DED0F1ACD4351BDDADA876020CAAA9 /* Pods-SnapConstraints_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SnapConstraints_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		44527A759BF750817CFB185D56DD547C /* Pods-SnapConstraints_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SnapConstraints_Tests-dummy.m"; sourceTree = "<group>"; };
+		540898B4E415970E7DF22C708AFF4DDD /* Pods-SnapConstraints_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SnapConstraints_Example-dummy.m"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		669DA47E0B1624DCD375C1C24A566419 /* Pods-SnapConstraints_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SnapConstraints_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6B02AF3D1A753C1AD29A83E30089AC35 /* Pods-SnapConstraints_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SnapConstraints_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		74FA234D1C1DBB9D0B6A9D0D0BA36E22 /* Pods-SnapConstraints_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SnapConstraints_Tests-resources.sh"; sourceTree = "<group>"; };
+		7AC00C0E3C6DC3C5A8E421ED325D8C09 /* Pods-SnapConstraints_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SnapConstraints_Example-resources.sh"; sourceTree = "<group>"; };
+		84004F508E3830688F6A093DC0CD4955 /* SnapConstraints.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapConstraints.xcconfig; sourceTree = "<group>"; };
+		8A3CB77BB8883A4E73F741E63ADDDDAA /* Pods-SnapConstraints_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SnapConstraints_Example-umbrella.h"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9A19863F5B8B1AE5111B4E5BC1B9B0BD /* SnapConstraints-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapConstraints-prefix.pch"; sourceTree = "<group>"; };
+		9E711DF117882A34AD944DCC5A9D0A51 /* SnapConstraints-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SnapConstraints-dummy.m"; sourceTree = "<group>"; };
+		A07AA836597A095EC5C61D6039E35820 /* Pods-SnapConstraints_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SnapConstraints_Example.modulemap"; sourceTree = "<group>"; };
+		A22A05759DB6255581777EA10C509AA6 /* Pods-SnapConstraints_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SnapConstraints_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		A32F375B6094A6C513F2753A093B5BF9 /* Pods_SnapConstraints_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapConstraints_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7AFF2A71EAD730F00DDA367 /* SnapManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapManager.swift; sourceTree = "<group>"; };
+		A7AFF2A81EAD730F00DDA367 /* SnapConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapConstraint.swift; sourceTree = "<group>"; };
+		A7AFF2A91EAD730F00DDA367 /* SnapConstraintType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapConstraintType.swift; sourceTree = "<group>"; };
+		A7AFF2AA1EAD730F00DDA367 /* SnapLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapLog.swift; sourceTree = "<group>"; };
+		A7AFF2AB1EAD730F00DDA367 /* SnapMask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapMask.swift; sourceTree = "<group>"; };
+		A7AFF2AC1EAD730F00DDA367 /* UIView+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		B138A5AF0808C68E96F0ED5932F53DEE /* Pods-SnapConstraints_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SnapConstraints_Example-frameworks.sh"; sourceTree = "<group>"; };
+		BC63D2F9375C682133525137F3E95355 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD527EAC176798755AED30612148833B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFF372C0CECE7AC08688E0EB12146D20 /* SnapConstraints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapConstraints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9892C31B2B2545D41837EE0324DBDEA /* Pods-SnapConstraints_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SnapConstraints_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		E9917777655DFD6323923AF737D44757 /* Pods-SnapConstraints_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SnapConstraints_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0147D32C14ADF1617EE6A26EC497637B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3B371CDE15B26896D5874F5B6293E82 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D6AAD9689AF25187574E99E5CA67994 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37B5776669A1D4BE914134DDC1B19631 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFC8E36D227BA44B727F3BD595F642AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43788EF0392D7CD7203DD181279B5355 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		06410AA140FC66794444AB95088AEB10 /* Pods-SnapConstraints_Example */ = {
+			isa = PBXGroup;
+			children = (
+				245C29BB8ED53D27DE9A333467107DF5 /* Info.plist */,
+				A07AA836597A095EC5C61D6039E35820 /* Pods-SnapConstraints_Example.modulemap */,
+				E9917777655DFD6323923AF737D44757 /* Pods-SnapConstraints_Example-acknowledgements.markdown */,
+				30BEBFB4F14F5F7A1EF4FE08C1860443 /* Pods-SnapConstraints_Example-acknowledgements.plist */,
+				540898B4E415970E7DF22C708AFF4DDD /* Pods-SnapConstraints_Example-dummy.m */,
+				B138A5AF0808C68E96F0ED5932F53DEE /* Pods-SnapConstraints_Example-frameworks.sh */,
+				7AC00C0E3C6DC3C5A8E421ED325D8C09 /* Pods-SnapConstraints_Example-resources.sh */,
+				8A3CB77BB8883A4E73F741E63ADDDDAA /* Pods-SnapConstraints_Example-umbrella.h */,
+				E9892C31B2B2545D41837EE0324DBDEA /* Pods-SnapConstraints_Example.debug.xcconfig */,
+				0299A04AAE9C0B5760BB882B14EBF478 /* Pods-SnapConstraints_Example.release.xcconfig */,
+			);
+			name = "Pods-SnapConstraints_Example";
+			path = "Target Support Files/Pods-SnapConstraints_Example";
+			sourceTree = "<group>";
+		};
+		2EB500D4D16DF5C894A5FE8F0430FF63 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E1AE817F89CB20ADD1DACBD46C050B73 /* SnapConstraints */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		594B2065458AC416BFCAE4096FF1D6C2 /* SnapConstraints */ = {
+			isa = PBXGroup;
+			children = (
+				854AFDD8D6527D93DFDCF8AD8204153B /* Classes */,
+			);
+			path = SnapConstraints;
+			sourceTree = "<group>";
+		};
+		6D39A2051C3B617183EA6178AE195F8D /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				06410AA140FC66794444AB95088AEB10 /* Pods-SnapConstraints_Example */,
+				A0E9FFC176332CC4F08F1A90B92CB844 /* Pods-SnapConstraints_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		78D5F71BB6DA9A3201D114D63661887B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A32F375B6094A6C513F2753A093B5BF9 /* Pods_SnapConstraints_Example.framework */,
+				1CD547C963FAF0D836500CCDC8EE25B1 /* Pods_SnapConstraints_Tests.framework */,
+				DFF372C0CECE7AC08688E0EB12146D20 /* SnapConstraints.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				2EB500D4D16DF5C894A5FE8F0430FF63 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				78D5F71BB6DA9A3201D114D63661887B /* Products */,
+				6D39A2051C3B617183EA6178AE195F8D /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		854AFDD8D6527D93DFDCF8AD8204153B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A7AFF2A71EAD730F00DDA367 /* SnapManager.swift */,
+				A7AFF2A81EAD730F00DDA367 /* SnapConstraint.swift */,
+				A7AFF2A91EAD730F00DDA367 /* SnapConstraintType.swift */,
+				A7AFF2AA1EAD730F00DDA367 /* SnapLog.swift */,
+				A7AFF2AB1EAD730F00DDA367 /* SnapMask.swift */,
+				A7AFF2AC1EAD730F00DDA367 /* UIView+Constraints.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		A0E9FFC176332CC4F08F1A90B92CB844 /* Pods-SnapConstraints_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				CD527EAC176798755AED30612148833B /* Info.plist */,
+				2483087AE688D4FCE5390E75DC356EFC /* Pods-SnapConstraints_Tests.modulemap */,
+				669DA47E0B1624DCD375C1C24A566419 /* Pods-SnapConstraints_Tests-acknowledgements.markdown */,
+				6B02AF3D1A753C1AD29A83E30089AC35 /* Pods-SnapConstraints_Tests-acknowledgements.plist */,
+				44527A759BF750817CFB185D56DD547C /* Pods-SnapConstraints_Tests-dummy.m */,
+				A22A05759DB6255581777EA10C509AA6 /* Pods-SnapConstraints_Tests-frameworks.sh */,
+				74FA234D1C1DBB9D0B6A9D0D0BA36E22 /* Pods-SnapConstraints_Tests-resources.sh */,
+				059525320B0FF2CC428C319D0EF976EB /* Pods-SnapConstraints_Tests-umbrella.h */,
+				0C280DE9B38CC29252A2EFA42A731ED6 /* Pods-SnapConstraints_Tests.debug.xcconfig */,
+				31DED0F1ACD4351BDDADA876020CAAA9 /* Pods-SnapConstraints_Tests.release.xcconfig */,
+			);
+			name = "Pods-SnapConstraints_Tests";
+			path = "Target Support Files/Pods-SnapConstraints_Tests";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		E1AE817F89CB20ADD1DACBD46C050B73 /* SnapConstraints */ = {
+			isa = PBXGroup;
+			children = (
+				594B2065458AC416BFCAE4096FF1D6C2 /* SnapConstraints */,
+				FE0B1389EC2FD7CC40CA9FA2C203996E /* Support Files */,
+			);
+			name = SnapConstraints;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		FE0B1389EC2FD7CC40CA9FA2C203996E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BC63D2F9375C682133525137F3E95355 /* Info.plist */,
+				0760AFBF7B72441A4F95F57E8476B9D1 /* SnapConstraints.modulemap */,
+				84004F508E3830688F6A093DC0CD4955 /* SnapConstraints.xcconfig */,
+				9E711DF117882A34AD944DCC5A9D0A51 /* SnapConstraints-dummy.m */,
+				9A19863F5B8B1AE5111B4E5BC1B9B0BD /* SnapConstraints-prefix.pch */,
+				2AC69F70842433397FFC134D6B90F662 /* SnapConstraints-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/SnapConstraints";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		138E8AEC6985CEB5BE83DEE73D95B72B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69D8A03C5FAF2453BA267963FB40DB16 /* SnapConstraints-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23C4A81A9803F44031AC373AC25C1EEB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C8E1739F68245B267E3B80DDDDC04EA /* Pods-SnapConstraints_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97056A29E8D54F3CF956DFAD2D7DB4B9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC3410F623F244AC23E9C877BD00364F /* Pods-SnapConstraints_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		AB7DF44781B795F0A54F6F70DA928B47 /* SnapConstraints */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E810CFF773BDA05084323C3ECFCD733F /* Build configuration list for PBXNativeTarget "SnapConstraints" */;
+			buildPhases = (
+				02F169796D82F0B3122D1ABD6AC20D7B /* Sources */,
+				1D6AAD9689AF25187574E99E5CA67994 /* Frameworks */,
+				138E8AEC6985CEB5BE83DEE73D95B72B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SnapConstraints;
+			productName = SnapConstraints;
+			productReference = DFF372C0CECE7AC08688E0EB12146D20 /* SnapConstraints.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D26AB604E84B17BAD3AA44E5FC5F8862 /* Pods-SnapConstraints_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E90A989A07270C71DE8A9986DFF157F /* Build configuration list for PBXNativeTarget "Pods-SnapConstraints_Example" */;
+			buildPhases = (
+				1AE79B0BC690F3C64AB2BEF055521860 /* Sources */,
+				0147D32C14ADF1617EE6A26EC497637B /* Frameworks */,
+				23C4A81A9803F44031AC373AC25C1EEB /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0344BE0AC11F41458E447FFC1F678348 /* PBXTargetDependency */,
+			);
+			name = "Pods-SnapConstraints_Example";
+			productName = "Pods-SnapConstraints_Example";
+			productReference = A32F375B6094A6C513F2753A093B5BF9 /* Pods_SnapConstraints_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F2202B282B584AFA3C3D0C82438B5872 /* Pods-SnapConstraints_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B6E1E80D03ED5C4901E097B1589035C /* Build configuration list for PBXNativeTarget "Pods-SnapConstraints_Tests" */;
+			buildPhases = (
+				CCF6EDFCA633AF3366D6B457C5A409B5 /* Sources */,
+				FFC8E36D227BA44B727F3BD595F642AD /* Frameworks */,
+				97056A29E8D54F3CF956DFAD2D7DB4B9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-SnapConstraints_Tests";
+			productName = "Pods-SnapConstraints_Tests";
+			productReference = 1CD547C963FAF0D836500CCDC8EE25B1 /* Pods_SnapConstraints_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					AB7DF44781B795F0A54F6F70DA928B47 = {
+						LastSwiftMigration = 0830;
+					};
+				};
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 78D5F71BB6DA9A3201D114D63661887B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D26AB604E84B17BAD3AA44E5FC5F8862 /* Pods-SnapConstraints_Example */,
+				F2202B282B584AFA3C3D0C82438B5872 /* Pods-SnapConstraints_Tests */,
+				AB7DF44781B795F0A54F6F70DA928B47 /* SnapConstraints */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		02F169796D82F0B3122D1ABD6AC20D7B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7AFF2AF1EAD730F00DDA367 /* SnapConstraintType.swift in Sources */,
+				27B98EC307F3BFD0249491ECFA866DBB /* SnapConstraints-dummy.m in Sources */,
+				A7AFF2AE1EAD730F00DDA367 /* SnapConstraint.swift in Sources */,
+				A7AFF2B21EAD730F00DDA367 /* UIView+Constraints.swift in Sources */,
+				A7AFF2B01EAD730F00DDA367 /* SnapLog.swift in Sources */,
+				A7AFF2AD1EAD730F00DDA367 /* SnapManager.swift in Sources */,
+				A7AFF2B11EAD730F00DDA367 /* SnapMask.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AE79B0BC690F3C64AB2BEF055521860 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86ED0BBC4F9C270FE9BDF4085197C1BD /* Pods-SnapConstraints_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCF6EDFCA633AF3366D6B457C5A409B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9FAF87938B8183E563D0EAF678A9BC8 /* Pods-SnapConstraints_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0344BE0AC11F41458E447FFC1F678348 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SnapConstraints;
+			target = AB7DF44781B795F0A54F6F70DA928B47 /* SnapConstraints */;
+			targetProxy = A760B498B159DA5306018370BDB3DEE1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1570BF9DFBE55223BE2E809E1EF399A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0299A04AAE9C0B5760BB882B14EBF478 /* Pods-SnapConstraints_Example.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SnapConstraints_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SnapConstraints_Example/Pods-SnapConstraints_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SnapConstraints_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		221693868008605E803C49CA13712560 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84004F508E3830688F6A093DC0CD4955 /* SnapConstraints.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SnapConstraints/SnapConstraints-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SnapConstraints/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SnapConstraints/SnapConstraints.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SnapConstraints;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		23480E0A8B906DC1361425089584C489 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9892C31B2B2545D41837EE0324DBDEA /* Pods-SnapConstraints_Example.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SnapConstraints_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SnapConstraints_Example/Pods-SnapConstraints_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SnapConstraints_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		345CC476DF4A7516DBD2220CF5035FF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		6401A04898BA2645E8C8337C165B4C51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31DED0F1ACD4351BDDADA876020CAAA9 /* Pods-SnapConstraints_Tests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SnapConstraints_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SnapConstraints_Tests/Pods-SnapConstraints_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SnapConstraints_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		717E77604BFBB04BEAF56608A1CB2EDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		744689C615E5473E9B28BF7899232134 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C280DE9B38CC29252A2EFA42A731ED6 /* Pods-SnapConstraints_Tests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SnapConstraints_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SnapConstraints_Tests/Pods-SnapConstraints_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SnapConstraints_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7A5A7489A03729F0B00788CB08A00FAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84004F508E3830688F6A093DC0CD4955 /* SnapConstraints.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SnapConstraints/SnapConstraints-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SnapConstraints/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SnapConstraints/SnapConstraints.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SnapConstraints;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				345CC476DF4A7516DBD2220CF5035FF3 /* Debug */,
+				717E77604BFBB04BEAF56608A1CB2EDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E90A989A07270C71DE8A9986DFF157F /* Build configuration list for PBXNativeTarget "Pods-SnapConstraints_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23480E0A8B906DC1361425089584C489 /* Debug */,
+				1570BF9DFBE55223BE2E809E1EF399A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B6E1E80D03ED5C4901E097B1589035C /* Build configuration list for PBXNativeTarget "Pods-SnapConstraints_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				744689C615E5473E9B28BF7899232134 /* Debug */,
+				6401A04898BA2645E8C8337C165B4C51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E810CFF773BDA05084323C3ECFCD733F /* Build configuration list for PBXNativeTarget "SnapConstraints" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				221693868008605E803C49CA13712560 /* Debug */,
+				7A5A7489A03729F0B00788CB08A00FAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
