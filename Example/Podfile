@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SnapConstraints_Example' do
+  pod 'SnapConstraints', :path => '../'
+
+  target 'SnapConstraints_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
