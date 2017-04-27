@@ -55,3 +55,7 @@ This framework allows you to do a lot of things, but most importantly, it will s
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end
+
+
+# Check lint:   pod spec lint SnapConstraints.podspec
+# Push:         pod trunk push
