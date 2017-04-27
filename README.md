@@ -1,6 +1,5 @@
 # SnapConstraints
 
-[![CI Status](http://img.shields.io/travis/sbrighiu/SnapConstraints.svg?style=flat)](https://travis-ci.org/sbrighiu/SnapConstraints)
 [![Version](https://img.shields.io/cocoapods/v/SnapConstraints.svg?style=flat)](http://cocoapods.org/pods/SnapConstraints)
 [![License](https://img.shields.io/cocoapods/l/SnapConstraints.svg?style=flat)](http://cocoapods.org/pods/SnapConstraints)
 [![Platform](https://img.shields.io/cocoapods/p/SnapConstraints.svg?style=flat)](http://cocoapods.org/pods/SnapConstraints)
