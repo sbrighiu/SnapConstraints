@@ -50,6 +50,9 @@ public enum SnapMaskValue: Int {
     case pinTopBottom, pinBottomTop
     case pinLeftRight, pinRightLeft
     
+    case ratio
+    case ratioWH, ratioHW
+    
     public var types: [SnapConstraintType] {
         switch self {
             
@@ -101,6 +104,10 @@ public enum SnapMaskValue: Int {
         case .pinRightBottom:       return [.trailing, .bottom]
         case .pinRightTop:          return [.trailing, .top]
         case .pinRightLeft:         return [.trailing, .leading]
+            
+        case .ratio:                return [.ratio]
+        case .ratioWH:              return [.ratioWH]
+        case .ratioHW:              return [.ratioHW]
         }
     }
     

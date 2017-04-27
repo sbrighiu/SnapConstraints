@@ -32,6 +32,9 @@ public enum SnapConstraintType {
     /// Used to center vertically or horizontally.
     case centerY, centerX
     
+    /// Used to set the ratio of width/height, and height/width
+    case ratio, ratioWH, ratioHW
+    
     public var description: String {
         switch self {
         case .undefined: return ".undefined"
@@ -41,8 +44,8 @@ public enum SnapConstraintType {
         case .top:      return ".top"
         case .bottom:   return ".bottom"
             
-        case .leftOf:     return ".left"
-        case .rightOf:    return ".right"
+        case .leftOf:   return ".left"
+        case .rightOf:  return ".right"
         case .above:    return ".above"
         case .below:    return ".below"
             
@@ -51,6 +54,9 @@ public enum SnapConstraintType {
             
         case .centerY:  return ".centerY"
         case .centerX:  return ".centerX"
+            
+        case .ratio, .ratioWH:      return ".ratioWH"
+        case .ratioHW:              return ".ratioHW"
         }
     }
     

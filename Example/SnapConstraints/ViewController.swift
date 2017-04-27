@@ -101,11 +101,23 @@ class ViewController: UIViewController {
         
         view10.snap.mask(.trailing, .leading, with: 16, to: view9).mask(.fillVertically, with: 8).tag = "Hey"        
         print("\n", view3.snaps)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        let view11 = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        view11.backgroundColor = UIColor.red
+        view11.tag = 11
+        view8.addSubview(view11)
+        
+//        view11.snap.ratioHW(of: 0.5)
+        view11.snap.mask(.ratioHW, multiplier: 1.5)
+        view11.snap.mask(.center)
+        view11.snap.height(of: 50)
+        
+        let view12 = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        view12.backgroundColor = UIColor.red
+        view8.addSubview(view12)
+        
+        view12.snap.ratio(equalTo: view11)
+        view12.snap.mask(.trailing, .centerVertically)
     }
 
 }

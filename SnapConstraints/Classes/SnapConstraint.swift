@@ -207,7 +207,7 @@ final public class SnapConstraint: NSLayoutConstraint {
     ///   - secondView: The view to which the constraint is related to. When this is not mentioned or is nil, 
     /// it defaults to the superview. "The second view"
     ///   - priority: The UILayoutPriority to be used.
-    ///   - multiplier: The multiplier value used to calculate the final location.
+    ///   - multiplier: The multiplier value used to calculate the final size.
     ///   - relation: The NSLayoutRelation to be used.
     ///   - line: Remembers the #line the method was called from.
     ///   - file: Remembers the #file the method was called from.
@@ -233,7 +233,7 @@ final public class SnapConstraint: NSLayoutConstraint {
     ///   - secondView: The view to which the constraint is related to. When this is not mentioned or is nil, 
     /// it defaults to the superview. "The second view"
     ///   - priority: The UILayoutPriority to be used.
-    ///   - multiplier: The multiplier value used to calculate the final location.
+    ///   - multiplier: The multiplier value used to calculate the final size.
     ///   - relation: The NSLayoutRelation to be used.
     ///   - line: Remembers the #line the method was called from.
     ///   - file: Remembers the #file the method was called from.
@@ -259,7 +259,7 @@ final public class SnapConstraint: NSLayoutConstraint {
     ///   - secondView: The view to which the constraint is related to. When this is not mentioned or is nil, 
     /// it defaults to the superview. "The second view"
     ///   - priority: The UILayoutPriority to be used.
-    ///   - multiplier: The multiplier value used to calculate the final location.
+    ///   - multiplier: The multiplier value used to calculate the final size.
     ///   - relation: The NSLayoutRelation to be used.
     ///   - line: Remembers the #line the method was called from.
     ///   - file: Remembers the #file the method was called from.
@@ -285,7 +285,7 @@ final public class SnapConstraint: NSLayoutConstraint {
     ///   - secondView: The view to which the constraint is related to. When this is not mentioned or is nil, 
     /// it defaults to the superview. "The second view"
     ///   - priority: The UILayoutPriority to be used.
-    ///   - multiplier: The multiplier value used to calculate the final location.
+    ///   - multiplier: The multiplier value used to calculate the final size.
     ///   - relation: The NSLayoutRelation to be used.
     ///   - line: Remembers the #line the method was called from.
     ///   - file: Remembers the #file the method was called from.
@@ -306,7 +306,7 @@ final public class SnapConstraint: NSLayoutConstraint {
     ///   - constant: The constant value for the constraint. This value will be a modifier if the 
     /// multiplier parameter is != than 1.
     ///   - priority: The UILayoutPriority to be used.
-    ///   - multiplier: The multiplier value used to calculate the final location.
+    ///   - multiplier: The multiplier value used to calculate the final size.
     ///   - relation: The NSLayoutRelation to be used.
     ///   - line: Remembers the #line the method was called from.
     ///   - file: Remembers the #file the method was called from.
@@ -327,7 +327,7 @@ final public class SnapConstraint: NSLayoutConstraint {
     ///   - constant: The constant value for the constraint. This value will be a modifier if the 
     /// multiplier parameter is != than 1.
     ///   - priority: The UILayoutPriority to be used.
-    ///   - multiplier: The multiplier value used to calculate the final location.
+    ///   - multiplier: The multiplier value used to calculate the final size.
     ///   - relation: The NSLayoutRelation to be used.
     ///   - line: Remembers the #line the method was called from.
     ///   - file: Remembers the #file the method was called from.
@@ -367,7 +367,7 @@ final public class SnapConstraint: NSLayoutConstraint {
     ///   - secondView: The view to which the constraint is related to. When this is not mentioned or is nil, 
     /// it defaults to the superview. "The second view"
     ///   - priority: The UILayoutPriority to be used.
-    ///   - multiplier: The multiplier value used to calculate the final location.
+    ///   - multiplier: The multiplier value used to calculate the final size.
     ///   - relation: The NSLayoutRelation to be used.
     ///   - line: Remembers the #line the method was called from.
     ///   - file: Remembers the #file the method was called from.
@@ -386,7 +386,7 @@ final public class SnapConstraint: NSLayoutConstraint {
     ///   - constant: The constant value for the constraint. This value will be a modifier if the 
     /// multiplier parameter is != than 1.
     ///   - priority: The UILayoutPriority to be used.
-    ///   - multiplier: The multiplier value used to calculate the final location.
+    ///   - multiplier: The multiplier value used to calculate the final size.
     ///   - relation: The NSLayoutRelation to be used.
     ///   - line: Remembers the #line the method was called from.
     ///   - file: Remembers the #file the method was called from.
@@ -406,7 +406,7 @@ final public class SnapConstraint: NSLayoutConstraint {
     ///   - secondView: The view to which the constraint is related to. When this is not mentioned or is nil, 
     /// it defaults to the superview. "The second view"
     ///   - priority: The UILayoutPriority to be used.
-    ///   - multiplier: The multiplier value used to calculate the final location.
+    ///   - multiplier: The multiplier value used to calculate the final size.
     ///   - relation: The NSLayoutRelation to be used.
     ///   - line: Remembers the #line the method was called from.
     ///   - file: Remembers the #file the method was called from.
@@ -425,7 +425,7 @@ final public class SnapConstraint: NSLayoutConstraint {
     ///   - constant: The constant value for the constraint. This value will be a modifier if the 
     /// multiplier parameter is != than 1.
     ///   - priority: The UILayoutPriority to be used.
-    ///   - multiplier: The multiplier value used to calculate the final location.
+    ///   - multiplier: The multiplier value used to calculate the final size.
     ///   - relation: The NSLayoutRelation to be used.
     ///   - line: Remembers the #line the method was called from.
     ///   - file: Remembers the #file the method was called from.
@@ -433,6 +433,74 @@ final public class SnapConstraint: NSLayoutConstraint {
         guard let firstView = self.firstView else { return SnapConstraint.object(type) }
         
         return SnapConstraint.snapConstraint(.height, with: constant, pointsFrom: firstView, to: secondView, priority: priority, multiplier: multiplier, relation: relation, line: line, file: file)
+    }
+    
+    /// Used to add a ratio of width/height constraint. By default it is 1:1.
+    ///
+    /// - Parameters:
+    ///   - multiplier: The multiplier value used to calculate the final size.
+    ///   - constant: The constant value for the constraint. This value will be a modifier if the 
+    /// multiplier parameter is != than 1.
+    ///   - secondView: The view to which the constraint is related to. When this is not mentioned or is nil, 
+    /// it defaults to the superview. "The second view"
+    ///   - priority: The UILayoutPriority to be used.
+    ///   - relation: The NSLayoutRelation to be used.
+    ///   - line: Remembers the #line the method was called from.
+    ///   - file: Remembers the #file the method was called from.
+    @discardableResult public func ratio(of multiplier: CGFloat = 1, with constant: CGFloat = 0, to secondView: UIView? = nil, priority: UILayoutPriority = 1000, relation: NSLayoutRelation = .equal, line: Int = #line, file: String = #file) -> SnapConstraint {
+        return ratioWH(of: multiplier, with: constant, to: secondView, priority: priority, relation: relation)
+    }
+    
+    /// Used to add a ratio of width/height constraint. By default it is 1:1.
+    ///
+    /// - Parameters:
+    ///   - multiplier: The multiplier value used to calculate the final size.
+    ///   - constant: The constant value for the constraint. This value will be a modifier if the 
+    /// multiplier parameter is != than 1.
+    ///   - secondView: The view to which the constraint is related to. When this is not mentioned or is nil, 
+    /// it defaults to the superview. "The second view"
+    ///   - priority: The UILayoutPriority to be used.
+    ///   - relation: The NSLayoutRelation to be used.
+    ///   - line: Remembers the #line the method was called from.
+    ///   - file: Remembers the #file the method was called from.
+    @discardableResult public func ratioWH(of multiplier: CGFloat = 1, with constant: CGFloat = 0, to secondView: UIView? = nil, priority: UILayoutPriority = 1000, relation: NSLayoutRelation = .equal, line: Int = #line, file: String = #file) -> SnapConstraint {
+        guard let firstView = self.firstView else { return SnapConstraint.object(type) }
+        
+        return SnapConstraint.snapConstraint(.ratioWH, with: constant, pointsFrom: firstView, to: secondView, priority: priority, multiplier: multiplier, relation: relation, line: line, file: file)
+    }
+    
+    /// Used to add a ratio of height/width constraint. By default it is 1:1.
+    ///
+    /// - Parameters:
+    ///   - multiplier: The multiplier value used to calculate the final size.
+    ///   - constant: The constant value for the constraint. This value will be a modifier if the 
+    /// multiplier parameter is != than 1.
+    ///   - secondView: The view to which the constraint is related to. When this is not mentioned or is nil, 
+    /// it defaults to the superview. "The second view"
+    ///   - priority: The UILayoutPriority to be used.
+    ///   - relation: The NSLayoutRelation to be used.
+    ///   - line: Remembers the #line the method was called from.
+    ///   - file: Remembers the #file the method was called from.
+    @discardableResult public func ratioHW(of multiplier: CGFloat = 1, with constant: CGFloat = 0, to secondView: UIView? = nil, priority: UILayoutPriority = 1000, relation: NSLayoutRelation = .equal, line: Int = #line, file: String = #file) -> SnapConstraint {
+        guard let firstView = self.firstView else { return SnapConstraint.object(type) }
+
+        return SnapConstraint.snapConstraint(.ratioHW, with: constant, pointsFrom: firstView, to: secondView, priority: priority, multiplier: multiplier, relation: relation, line: line, file: file)
+    }
+    
+    /// Used to link 2 views with the same ratio. By default it is 1:1.
+    ///
+    /// - Parameters:
+    ///   - secondView: The view to which the constraint is related to. When this is not mentioned or is nil, 
+    /// it defaults to the superview. "The second view"
+    ///   - constant: The constant value for the constraint. This value will be a modifier if the 
+    /// multiplier parameter is != than 1.
+    ///   - priority: The UILayoutPriority to be used.
+    ///   - multiplier: The multiplier value used to calculate the final size.
+    ///   - relation: The NSLayoutRelation to be used.
+    ///   - line: Remembers the #line the method was called from.
+    ///   - file: Remembers the #file the method was called from.
+    @discardableResult public func ratio(equalTo secondView: UIView, with constant: CGFloat = 0, priority: UILayoutPriority = 1000, multiplier: CGFloat = 1, relation: NSLayoutRelation = .equal, line: Int = #line, file: String = #file) -> SnapConstraint {
+        return self.height(equalTo: secondView, with: constant, priority: priority, multiplier: multiplier, relation: relation).width(equalTo: secondView, with: constant, priority: priority, multiplier: multiplier, relation: relation)
     }
     
     // MARK: -   
@@ -449,7 +517,7 @@ final public class SnapConstraint: NSLayoutConstraint {
     ///   - constant: The constant value for the constraint. This value will be a modifier if the 
     /// multiplier parameter is != than 1.
     ///   - priority: The UILayoutPriority to be used.
-    ///   - multiplier: The multiplier value used to calculate the final location.
+    ///   - multiplier: The multiplier value used to calculate the final size.
     ///   - relation: The NSLayoutRelation to be used.
     ///   - line: Remembers the #line the method was called from.
     ///   - file: Remembers the #file the method was called from.
@@ -472,7 +540,7 @@ final public class SnapConstraint: NSLayoutConstraint {
     ///   - constant: The constant value for the constraint. This value will be a modifier if the 
     /// multiplier parameter is != than 1.
     ///   - priority: The UILayoutPriority to be used.
-    ///   - multiplier: The multiplier value used to calculate the final location.
+    ///   - multiplier: The multiplier value used to calculate the final size.
     ///   - relation: The NSLayoutRelation to be used.
     ///   - line: Remembers the #line the method was called from.
     ///   - file: Remembers the #file the method was called from.
@@ -496,7 +564,7 @@ final public class SnapConstraint: NSLayoutConstraint {
     ///   - constant: The constant value for the constraint. This value will be a modifier if the 
     /// multiplier parameter is != than 1.
     ///   - priority: The UILayoutPriority to be used.
-    ///   - multiplier: The multiplier value used to calculate the final location.
+    ///   - multiplier: The multiplier value used to calculate the final size.
     ///   - relation: The NSLayoutRelation to be used.
     ///   - line: Remembers the #line the method was called from.
     ///   - file: Remembers the #file the method was called from.
@@ -519,7 +587,7 @@ final public class SnapConstraint: NSLayoutConstraint {
     ///   - constant: The constant value for the constraint. This value will be a modifier if the 
     /// multiplier parameter is != than 1.
     ///   - priority: The UILayoutPriority to be used.
-    ///   - multiplier: The multiplier value used to calculate the final location.
+    ///   - multiplier: The multiplier value used to calculate the final size.
     ///   - relation: The NSLayoutRelation to be used.
     ///   - line: Remembers the #line the method was called from.
     ///   - file: Remembers the #file the method was called from.
@@ -542,7 +610,7 @@ final public class SnapConstraint: NSLayoutConstraint {
     ///   - secondView: The view to which the constraint is related to. When this is not mentioned or is nil, 
     /// it defaults to the superview. "The second view"
     ///   - priority: The UILayoutPriority to be used.
-    ///   - multiplier: The multiplier value used to calculate the final location.
+    ///   - multiplier: The multiplier value used to calculate the final size.
     ///   - relation: The NSLayoutRelation to be used.
     ///   - line: Remembers the #line the method was called from.
     ///   - file: Remembers the #file the method was called from.
@@ -631,6 +699,21 @@ final public class SnapConstraint: NSLayoutConstraint {
                     secondAttribute = NSLayoutAttribute.notAnAttribute
                 } else {
                     secondAttribute = NSLayoutAttribute.height
+                }
+                
+            // Ratio Constraints
+            case .ratio, .ratioWH:
+                firstAttribute = NSLayoutAttribute.width
+                secondAttribute = NSLayoutAttribute.height
+                if target == nil {
+                    target = firstView
+                }
+                
+            case .ratioHW:
+                firstAttribute = NSLayoutAttribute.height
+                secondAttribute = NSLayoutAttribute.width
+                if target == nil {
+                    target = firstView
                 }
                 
             // Center Constraints
