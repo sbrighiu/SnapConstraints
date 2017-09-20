@@ -27,7 +27,7 @@ public enum SnapMaskValue: Int {
     case centerY
     
     /// These keys are used to describe true masks
-    case margins, paddings
+    case margins, padding
     
     case fillHorizontally
     case fillVertically
@@ -41,6 +41,8 @@ public enum SnapMaskValue: Int {
     case pinLeftTopBottom, pinLeftBottomTop
     case pinBottomLeftRight, pinBottomRightLeft
     case pinRightTopBottom, pinRightBottomTop
+    case pinTopLeftBottom, pinBottomLeftTop
+    case pinTopRightBottom, pinBottomRightTop
     
     case pinVertically, pinHorizontally
     case pinTopRight, pinTopLeft
@@ -73,7 +75,7 @@ public enum SnapMaskValue: Int {
         case .centerX:  return [.centerX]
             
         // Real masks
-        case .margins, .fill, .paddings:        return [.leading, .trailing, .top, .bottom]
+        case .margins, .fill, .padding:        return [.leading, .trailing, .top, .bottom]
         case .fillHorizontally:                 return [.leading, .trailing]
         case .fillVertically:                   return [.top, .bottom]
             
@@ -84,10 +86,10 @@ public enum SnapMaskValue: Int {
         case .pinTopRightLeft:      return [.top, .trailing, .leading]
         case .pinTopLeftRight:      return [.top, .leading, .trailing]
         case .pinLeftTopBottom:     return [.leading, .top, .bottom]
-        case .pinLeftBottomTop:     return [.leading, .bottom, .top]
+        case .pinLeftBottomTop, .pinTopLeftBottom, .pinBottomLeftTop:     return [.leading, .bottom, .top]
         case .pinBottomLeftRight:   return [.bottom, .leading, .trailing]
         case .pinBottomRightLeft:   return [.bottom, .trailing, .leading]
-        case .pinRightTopBottom:    return [.trailing, .top, .bottom]
+        case .pinRightTopBottom, .pinBottomRightTop, .pinTopRightBottom:    return [.trailing, .top, .bottom]
         case .pinRightBottomTop:    return [.trailing, .bottom, .top]
         case .pinVertically:        return [.top, .bottom]
         case .pinHorizontally:      return [.leading, .trailing]

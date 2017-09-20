@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SnapConstraints'
-  s.version          = '0.1.2'
+  s.version          = '1.0'
   s.summary          = 'A lightweight library for working with constraints programatically.'
 
 # This description is used to generate tags and improve search results.
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-ALL YOU NEED TO DO IS .snap ;)
+ALL YOU NEED TO DO IS .snap ;). Now working with Swift 4.
 
 # Useful information ahead:
 
@@ -29,11 +29,6 @@ ALL YOU NEED TO DO IS .snap ;)
 - The framework is build around SnapConstraintTypes and constraints can be created by accessing any child of UIView, and using the variable '.snap' to initiate the chaining of constraints and mask. Yup, chaining and masks, you heard right.
 * All constraints created can be retrieved immediately by using the .snaps methods on the view they are added to. 
 
-# Future work:
-This framework allows you to do a lot of things, but most importantly, it will signal, in the near future, when you are trying to do something prohibited by your view hierarchy, and most of the time, it will help you do it in a safe way ;). Some of the issues are: 
-1. 1000/999 priority changes
-2. multiplier change after the creation of a constraint
-3. ... and more to come
                        DESC
 
   s.homepage         = 'https://github.com/sbrighiu/SnapConstraints'

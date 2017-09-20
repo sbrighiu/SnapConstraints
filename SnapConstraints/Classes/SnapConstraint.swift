@@ -93,10 +93,10 @@ final public class SnapConstraint: NSLayoutConstraint {
         case is UIToolbar:                  firstViewDescription = "UIToolbar"
         case is UITabBar:                   firstViewDescription = "UITabBar"
         case is UISearchBar:                firstViewDescription = "UISearchBar"
-        default:                            firstViewDescription = String(describing: type(of: firstView))
+        default:                            firstViewDescription = String(describing: Swift.type(of: firstView))
         }
         
-        firstViewDescription = String(describing: type(of: firstView))
+        firstViewDescription = String(describing: Swift.type(of: firstView))
         
         var key: Int
         var keyString = ""
@@ -117,7 +117,7 @@ final public class SnapConstraint: NSLayoutConstraint {
         
         let constant = self.constant != 0 ? ".constant(\(self.constant))" : ""
         let multiplier = self.multiplier != 1 ? ".multiplier[x\(self.multiplier)]" : ""
-        let priority = self.priority != 1000 ? ".priority{\(Int(self.priority))}" : ""
+        let priority = self.priority.rawValue != 1000 ? ".priority{\(Int(self.priority.rawValue))}" : ""
         let tag = self.tag != "" ? "\"\(self.tag)\":" : ""
         let endline = withEndline ? "\n" : ""
         
@@ -211,7 +211,7 @@ final public class SnapConstraint: NSLayoutConstraint {
     ///   - relation: The NSLayoutRelation to be used.
     ///   - line: Remembers the #line the method was called from.
     ///   - file: Remembers the #file the method was called from.
-    @discardableResult public func leading(with constant: CGFloat, to secondView: UIView? = nil, priority: UILayoutPriority = 1000, multiplier: CGFloat = 1, relation: NSLayoutRelation = .equal, line: Int = #line, file: String = #file) -> SnapConstraint {
+    @discardableResult public func leading(with constant: CGFloat, to secondView: UIView? = nil, priority: Float = 1000, multiplier: CGFloat = 1, relation: NSLayoutRelation = .equal, line: Int = #line, file: String = #file) -> SnapConstraint {
         guard let firstView = self.firstView else { return SnapConstraint.object(type) }
         
         return SnapConstraint.snapConstraint(.leading, with: constant, pointsFrom: firstView, to: secondView, priority: priority, multiplier: multiplier, relation: relation, line: #line, file: #file)   
@@ -237,7 +237,7 @@ final public class SnapConstraint: NSLayoutConstraint {
     ///   - relation: The NSLayoutRelation to be used.
     ///   - line: Remembers the #line the method was called from.
     ///   - file: Remembers the #file the method was called from.
-    @discardableResult public func trailing(with constant: CGFloat, to secondView: UIView? = nil, priority: UILayoutPriority = 1000, multiplier: CGFloat = 1, relation: NSLayoutRelation = .equal, line: Int = #line, file: String = #file) -> SnapConstraint {
+    @discardableResult public func trailing(with constant: CGFloat, to secondView: UIView? = nil, priority: Float = 1000, multiplier: CGFloat = 1, relation: NSLayoutRelation = .equal, line: Int = #line, file: String = #file) -> SnapConstraint {
         guard let firstView = self.firstView else { return SnapConstraint.object(type) }
         
         return SnapConstraint.snapConstraint(.trailing, with: constant, pointsFrom: firstView, to: secondView, priority: priority, multiplier: multiplier, relation: relation, line: line, file: file)
@@ -263,7 +263,7 @@ final public class SnapConstraint: NSLayoutConstraint {
     ///   - relation: The NSLayoutRelation to be used.
     ///   - line: Remembers the #line the method was called from.
     ///   - file: Remembers the #file the method was called from.
-    @discardableResult public func top(with constant: CGFloat, to secondView: UIView? = nil, priority: UILayoutPriority = 1000, multiplier: CGFloat = 1, relation: NSLayoutRelation = .equal, line: Int = #line, file: String = #file) -> SnapConstraint {
+    @discardableResult public func top(with constant: CGFloat, to secondView: UIView? = nil, priority: Float = 1000, multiplier: CGFloat = 1, relation: NSLayoutRelation = .equal, line: Int = #line, file: String = #file) -> SnapConstraint {
         guard let firstView = self.firstView else { return SnapConstraint.object(type) }
         
         return SnapConstraint.snapConstraint(.top, with: constant, pointsFrom: firstView, to: secondView, priority: priority, multiplier: multiplier, relation: relation, line: line, file: file)
@@ -289,7 +289,7 @@ final public class SnapConstraint: NSLayoutConstraint {
     ///   - relation: The NSLayoutRelation to be used.
     ///   - line: Remembers the #line the method was called from.
     ///   - file: Remembers the #file the method was called from.
-    @discardableResult public func bottom(with constant: CGFloat, to secondView: UIView? = nil, priority: UILayoutPriority = 1000, multiplier: CGFloat = 1, relation: NSLayoutRelation = .equal, line: Int = #line, file: String = #file) -> SnapConstraint {
+    @discardableResult public func bottom(with constant: CGFloat, to secondView: UIView? = nil, priority: Float = 1000, multiplier: CGFloat = 1, relation: NSLayoutRelation = .equal, line: Int = #line, file: String = #file) -> SnapConstraint {
         guard let firstView = self.firstView else { return SnapConstraint.object(type) }
         
         return SnapConstraint.snapConstraint(.bottom, with: constant, pointsFrom: firstView, to: secondView, priority: priority, multiplier: multiplier, relation: relation, line: line, file: file)
@@ -310,7 +310,7 @@ final public class SnapConstraint: NSLayoutConstraint {
     ///   - relation: The NSLayoutRelation to be used.
     ///   - line: Remembers the #line the method was called from.
     ///   - file: Remembers the #file the method was called from.
-    @discardableResult public func left(of secondView: UIView, by constant: CGFloat = 0, priority: UILayoutPriority = 1000, multiplier: CGFloat = 1, relation: NSLayoutRelation = .equal, line: Int = #line, file: String = #file) -> SnapConstraint {
+    @discardableResult public func left(of secondView: UIView, by constant: CGFloat = 0, priority: Float = 1000, multiplier: CGFloat = 1, relation: NSLayoutRelation = .equal, line: Int = #line, file: String = #file) -> SnapConstraint {
         guard let firstView = self.firstView else { return SnapConstraint.object(type) }
         
         return SnapConstraint.snapConstraint(.leftOf, with: constant, pointsFrom: firstView, to: secondView, priority: priority, multiplier: multiplier, relation: relation, line: line, file: file)
@@ -331,7 +331,7 @@ final public class SnapConstraint: NSLayoutConstraint {
     ///   - relation: The NSLayoutRelation to be used.
     ///   - line: Remembers the #line the method was called from.
     ///   - file: Remembers the #file the method was called from.
-    @discardableResult public func right(of secondView: UIView, by constant: CGFloat = 0, priority: UILayoutPriority = 1000, multiplier: CGFloat = 1, relation: NSLayoutRelation = .equal, line: Int = #line, file: String = #file) -> SnapConstraint {
+    @discardableResult public func right(of secondView: UIView, by constant: CGFloat = 0, priority: Float = 1000, multiplier: CGFloat = 1, relation: NSLayoutRelation = .equal, line: Int = #line, file: String = #file) -> SnapConstraint {
         guard let firstView = self.firstView else { return SnapConstraint.object(type) }
         
         return SnapConstraint.snapConstraint(.rightOf, with: constant, pointsFrom: firstView, to: secondView, priority: priority, multiplier: multiplier, relation: relation, line: line, file: file)
@@ -341,7 +341,7 @@ final public class SnapConstraint: NSLayoutConstraint {
     /// Used to add a bottom constraint to a UIView that is above the one in question. Use only for constraints 
     /// inside the superview, when relating to other views (e.g. view1 is "above" view2). 
     /// Uses opposing attributes (leading/trailing, top/bottom) when created.
-    @discardableResult public func above(_ secondView: UIView, by constant: CGFloat = 0, priority: UILayoutPriority = 1000, multiplier: CGFloat = 1, relation: NSLayoutRelation = .equal, line: Int = #line, file: String = #file) -> SnapConstraint {
+    @discardableResult public func above(_ secondView: UIView, by constant: CGFloat = 0, priority: Float = 1000, multiplier: CGFloat = 1, relation: NSLayoutRelation = .equal, line: Int = #line, file: String = #file) -> SnapConstraint {
         guard let firstView = self.firstView else { return SnapConstraint.object(type) }
         
         return SnapConstraint.snapConstraint(.above, with: constant, pointsFrom: firstView, to: secondView, priority: priority, multiplier: multiplier, relation: relation, line: line, file: file)
@@ -351,7 +351,7 @@ final public class SnapConstraint: NSLayoutConstraint {
     /// Used to add a top constraint to a UIView that is below the one in question. Use only for constraints 
     /// inside the superview, when relating to other views (e.g. view1 is "below" view2). 
     /// Uses opposing attributes (leading/trailing, top/bottom) when created.
-    @discardableResult public func below(_ secondView: UIView, by constant: CGFloat = 0, priority: UILayoutPriority = 1000, multiplier: CGFloat = 1, relation: NSLayoutRelation = .equal, line: Int = #line, file: String = #file) -> SnapConstraint {
+    @discardableResult public func below(_ secondView: UIView, by constant: CGFloat = 0, priority: Float = 1000, multiplier: CGFloat = 1, relation: NSLayoutRelation = .equal, line: Int = #line, file: String = #file) -> SnapConstraint {
         guard let firstView = self.firstView else { return SnapConstraint.object(type) }
         
         return SnapConstraint.snapConstraint(.below, with: constant, pointsFrom: firstView, to: secondView, priority: priority, multiplier: multiplier, relation: relation, line: line, file: file)
@@ -371,7 +371,7 @@ final public class SnapConstraint: NSLayoutConstraint {
     ///   - relation: The NSLayoutRelation to be used.
     ///   - line: Remembers the #line the method was called from.
     ///   - file: Remembers the #file the method was called from.
-    @discardableResult public func width(of constant: CGFloat, equalTo secondView: UIView? = nil, priority: UILayoutPriority = 1000, multiplier: CGFloat = 1, relation: NSLayoutRelation = .equal, line: Int = #line, file: String = #file) -> SnapConstraint {
+    @discardableResult public func width(of constant: CGFloat, equalTo secondView: UIView? = nil, priority: Float = 1000, multiplier: CGFloat = 1, relation: NSLayoutRelation = .equal, line: Int = #line, file: String = #file) -> SnapConstraint {
         guard let firstView = self.firstView else { return SnapConstraint.object(type) }
         
         return SnapConstraint.snapConstraint(.width, with: constant, pointsFrom: firstView, to: secondView, priority: priority, multiplier: multiplier, relation: relation, line: line, file: file)
@@ -390,7 +390,7 @@ final public class SnapConstraint: NSLayoutConstraint {
     ///   - relation: The NSLayoutRelation to be used.
     ///   - line: Remembers the #line the method was called from.
     ///   - file: Remembers the #file the method was called from.
-    @discardableResult public func width(equalTo secondView: UIView, with constant: CGFloat = 0, priority: UILayoutPriority = 1000, multiplier: CGFloat = 1, relation: NSLayoutRelation = .equal, line: Int = #line, file: String = #file) -> SnapConstraint {
+    @discardableResult public func width(equalTo secondView: UIView, with constant: CGFloat = 0, priority: Float = 1000, multiplier: CGFloat = 1, relation: NSLayoutRelation = .equal, line: Int = #line, file: String = #file) -> SnapConstraint {
         guard let firstView = self.firstView else { return SnapConstraint.object(type) }
         
         return SnapConstraint.snapConstraint(.width, with: constant, pointsFrom: firstView, to: secondView, priority: priority, multiplier: multiplier, relation: relation, line: line, file: file)
@@ -410,7 +410,7 @@ final public class SnapConstraint: NSLayoutConstraint {
     ///   - relation: The NSLayoutRelation to be used.
     ///   - line: Remembers the #line the method was called from.
     ///   - file: Remembers the #file the method was called from.
-    @discardableResult public func height(of constant: CGFloat, equalTo secondView: UIView? = nil, priority: UILayoutPriority = 1000, multiplier: CGFloat = 1, relation: NSLayoutRelation = .equal, line: Int = #line, file: String = #file) -> SnapConstraint {
+    @discardableResult public func height(of constant: CGFloat, equalTo secondView: UIView? = nil, priority: Float = 1000, multiplier: CGFloat = 1, relation: NSLayoutRelation = .equal, line: Int = #line, file: String = #file) -> SnapConstraint {
         guard let firstView = self.firstView else { return SnapConstraint.object(type) }
         
         return SnapConstraint.snapConstraint(.height, with: constant, pointsFrom: firstView, to: secondView, priority: priority, multiplier: multiplier, relation: relation, line: line, file: file)
@@ -429,7 +429,7 @@ final public class SnapConstraint: NSLayoutConstraint {
     ///   - relation: The NSLayoutRelation to be used.
     ///   - line: Remembers the #line the method was called from.
     ///   - file: Remembers the #file the method was called from.
-    @discardableResult public func height(equalTo secondView: UIView, with constant: CGFloat = 0, priority: UILayoutPriority = 1000, multiplier: CGFloat = 1, relation: NSLayoutRelation = .equal, line: Int = #line, file: String = #file) -> SnapConstraint {
+    @discardableResult public func height(equalTo secondView: UIView, with constant: CGFloat = 0, priority: Float = 1000, multiplier: CGFloat = 1, relation: NSLayoutRelation = .equal, line: Int = #line, file: String = #file) -> SnapConstraint {
         guard let firstView = self.firstView else { return SnapConstraint.object(type) }
         
         return SnapConstraint.snapConstraint(.height, with: constant, pointsFrom: firstView, to: secondView, priority: priority, multiplier: multiplier, relation: relation, line: line, file: file)
@@ -447,7 +447,7 @@ final public class SnapConstraint: NSLayoutConstraint {
     ///   - relation: The NSLayoutRelation to be used.
     ///   - line: Remembers the #line the method was called from.
     ///   - file: Remembers the #file the method was called from.
-    @discardableResult public func ratio(of multiplier: CGFloat = 1, with constant: CGFloat = 0, to secondView: UIView? = nil, priority: UILayoutPriority = 1000, relation: NSLayoutRelation = .equal, line: Int = #line, file: String = #file) -> SnapConstraint {
+    @discardableResult public func ratio(of multiplier: CGFloat = 1, with constant: CGFloat = 0, to secondView: UIView? = nil, priority: Float = 1000, relation: NSLayoutRelation = .equal, line: Int = #line, file: String = #file) -> SnapConstraint {
         return ratioWH(of: multiplier, with: constant, to: secondView, priority: priority, relation: relation)
     }
     
@@ -463,7 +463,7 @@ final public class SnapConstraint: NSLayoutConstraint {
     ///   - relation: The NSLayoutRelation to be used.
     ///   - line: Remembers the #line the method was called from.
     ///   - file: Remembers the #file the method was called from.
-    @discardableResult public func ratioWH(of multiplier: CGFloat = 1, with constant: CGFloat = 0, to secondView: UIView? = nil, priority: UILayoutPriority = 1000, relation: NSLayoutRelation = .equal, line: Int = #line, file: String = #file) -> SnapConstraint {
+    @discardableResult public func ratioWH(of multiplier: CGFloat = 1, with constant: CGFloat = 0, to secondView: UIView? = nil, priority: Float = 1000, relation: NSLayoutRelation = .equal, line: Int = #line, file: String = #file) -> SnapConstraint {
         guard let firstView = self.firstView else { return SnapConstraint.object(type) }
         
         return SnapConstraint.snapConstraint(.ratioWH, with: constant, pointsFrom: firstView, to: secondView, priority: priority, multiplier: multiplier, relation: relation, line: line, file: file)
@@ -481,7 +481,7 @@ final public class SnapConstraint: NSLayoutConstraint {
     ///   - relation: The NSLayoutRelation to be used.
     ///   - line: Remembers the #line the method was called from.
     ///   - file: Remembers the #file the method was called from.
-    @discardableResult public func ratioHW(of multiplier: CGFloat = 1, with constant: CGFloat = 0, to secondView: UIView? = nil, priority: UILayoutPriority = 1000, relation: NSLayoutRelation = .equal, line: Int = #line, file: String = #file) -> SnapConstraint {
+    @discardableResult public func ratioHW(of multiplier: CGFloat = 1, with constant: CGFloat = 0, to secondView: UIView? = nil, priority: Float = 1000, relation: NSLayoutRelation = .equal, line: Int = #line, file: String = #file) -> SnapConstraint {
         guard let firstView = self.firstView else { return SnapConstraint.object(type) }
 
         return SnapConstraint.snapConstraint(.ratioHW, with: constant, pointsFrom: firstView, to: secondView, priority: priority, multiplier: multiplier, relation: relation, line: line, file: file)
@@ -499,7 +499,7 @@ final public class SnapConstraint: NSLayoutConstraint {
     ///   - relation: The NSLayoutRelation to be used.
     ///   - line: Remembers the #line the method was called from.
     ///   - file: Remembers the #file the method was called from.
-    @discardableResult public func ratio(equalTo secondView: UIView, with constant: CGFloat = 0, priority: UILayoutPriority = 1000, multiplier: CGFloat = 1, relation: NSLayoutRelation = .equal, line: Int = #line, file: String = #file) -> SnapConstraint {
+    @discardableResult public func ratio(equalTo secondView: UIView, with constant: CGFloat = 0, priority: Float = 1000, multiplier: CGFloat = 1, relation: NSLayoutRelation = .equal, line: Int = #line, file: String = #file) -> SnapConstraint {
         return self.height(equalTo: secondView, with: constant, priority: priority, multiplier: multiplier, relation: relation).width(equalTo: secondView, with: constant, priority: priority, multiplier: multiplier, relation: relation)
     }
     
@@ -521,7 +521,7 @@ final public class SnapConstraint: NSLayoutConstraint {
     ///   - relation: The NSLayoutRelation to be used.
     ///   - line: Remembers the #line the method was called from.
     ///   - file: Remembers the #file the method was called from.
-    @discardableResult public func centerY(to secondView: UIView?, with constant: CGFloat = 0, priority: UILayoutPriority = 1000, multiplier: CGFloat = 1, relation: NSLayoutRelation = .equal, line: Int = #line, file: String = #file) -> SnapConstraint {
+    @discardableResult public func centerY(to secondView: UIView?, with constant: CGFloat = 0, priority: Float = 1000, multiplier: CGFloat = 1, relation: NSLayoutRelation = .equal, line: Int = #line, file: String = #file) -> SnapConstraint {
         guard let firstView = self.firstView else { return SnapConstraint.object(type) }
         
         return SnapConstraint.snapConstraint(.centerY, with: constant, pointsFrom: firstView, to: secondView, priority: priority, multiplier: multiplier, relation: relation, line: line, file: file)
@@ -544,7 +544,7 @@ final public class SnapConstraint: NSLayoutConstraint {
     ///   - relation: The NSLayoutRelation to be used.
     ///   - line: Remembers the #line the method was called from.
     ///   - file: Remembers the #file the method was called from.
-    @discardableResult public func centerVertically(to secondView: UIView?, with constant: CGFloat = 0, priority: UILayoutPriority = 1000, multiplier: CGFloat = 1, relation: NSLayoutRelation = .equal, line: Int = #line, file: String = #file) -> SnapConstraint {
+    @discardableResult public func centerVertically(to secondView: UIView?, with constant: CGFloat = 0, priority: Float = 1000, multiplier: CGFloat = 1, relation: NSLayoutRelation = .equal, line: Int = #line, file: String = #file) -> SnapConstraint {
         guard let firstView = self.firstView else { return SnapConstraint.object(type) }
         
         return SnapConstraint.snapConstraint(.centerY, with: constant, pointsFrom: firstView, to: secondView, priority: priority, multiplier: multiplier, relation: relation, line: line, file: file)
@@ -568,7 +568,7 @@ final public class SnapConstraint: NSLayoutConstraint {
     ///   - relation: The NSLayoutRelation to be used.
     ///   - line: Remembers the #line the method was called from.
     ///   - file: Remembers the #file the method was called from.
-    @discardableResult public func centerX(to secondView: UIView?, with constant: CGFloat = 0, priority: UILayoutPriority = 1000, multiplier: CGFloat = 1, relation: NSLayoutRelation = .equal, line: Int = #line, file: String = #file) -> SnapConstraint {
+    @discardableResult public func centerX(to secondView: UIView?, with constant: CGFloat = 0, priority: Float = 1000, multiplier: CGFloat = 1, relation: NSLayoutRelation = .equal, line: Int = #line, file: String = #file) -> SnapConstraint {
         guard let firstView = self.firstView else { return SnapConstraint.object(type) }
         
         return SnapConstraint.snapConstraint(.centerX, with: constant, pointsFrom: firstView, to: secondView, priority: priority, multiplier: multiplier, relation: relation, line: line, file: file)
@@ -591,7 +591,7 @@ final public class SnapConstraint: NSLayoutConstraint {
     ///   - relation: The NSLayoutRelation to be used.
     ///   - line: Remembers the #line the method was called from.
     ///   - file: Remembers the #file the method was called from.
-    @discardableResult public func centerHorizontally(to secondView: UIView?, with constant: CGFloat = 0, priority: UILayoutPriority = 1000, multiplier: CGFloat = 1, relation: NSLayoutRelation = .equal, line: Int = #line, file: String = #file) -> SnapConstraint {
+    @discardableResult public func centerHorizontally(to secondView: UIView?, with constant: CGFloat = 0, priority: Float = 1000, multiplier: CGFloat = 1, relation: NSLayoutRelation = .equal, line: Int = #line, file: String = #file) -> SnapConstraint {
         guard let firstView = self.firstView else { return SnapConstraint.object(type) }
         
         return SnapConstraint.snapConstraint(.centerX, with: constant, pointsFrom: firstView, to: secondView, priority: priority, multiplier: multiplier, relation: relation, line: line, file: file)
@@ -618,7 +618,7 @@ final public class SnapConstraint: NSLayoutConstraint {
                                         with constant: CGFloat = 0, 
                                         pointsFrom firstView: UIView,
                                         to secondView: UIView? = nil, 
-                                        priority: UILayoutPriority = 1000, 
+                                        priority: Float = 1000, 
                                         multiplier: CGFloat = 1,
                                         relation: NSLayoutRelation = .equal,
                                         line: Int = #line, 
@@ -748,7 +748,7 @@ final public class SnapConstraint: NSLayoutConstraint {
                                             multiplier: multiplier, 
                                             constant: constraintModifier * constant)
                 
-                constraint.priority = priority
+                constraint.priority = UILayoutPriority(rawValue: priority)
                 
                 // Adding superview Metadata
                 constraint.type = type
@@ -787,7 +787,7 @@ final public class SnapConstraint: NSLayoutConstraint {
     @discardableResult public func mask(_ values: SnapMaskValue..., 
         with constant: CGFloat = 0,
         to secondView: UIView? = nil, 
-        priority: UILayoutPriority = 1000, 
+        priority: Float = 1000, 
         multiplier: CGFloat = 1,
         relation: NSLayoutRelation = .equal,
         line: Int = #line, 
@@ -818,7 +818,7 @@ final public class SnapConstraint: NSLayoutConstraint {
     @discardableResult private func mask(_ types: [SnapConstraintType], 
                                          with constant: CGFloat = 0,
                                          to secondView: UIView? = nil, 
-                                         priority: UILayoutPriority = 1000, 
+                                         priority: Float = 1000, 
                                          multiplier: CGFloat = 1,
                                          relation: NSLayoutRelation = .equal,
                                          line: Int = #line, 
