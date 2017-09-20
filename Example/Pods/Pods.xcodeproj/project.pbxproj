@@ -10,7 +10,6 @@
 		1C8E1739F68245B267E3B80DDDDC04EA /* Pods-SnapConstraints_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A3CB77BB8883A4E73F741E63ADDDDAA /* Pods-SnapConstraints_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27B98EC307F3BFD0249491ECFA866DBB /* SnapConstraints-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E711DF117882A34AD944DCC5A9D0A51 /* SnapConstraints-dummy.m */; };
 		37B5776669A1D4BE914134DDC1B19631 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		43788EF0392D7CD7203DD181279B5355 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		69D8A03C5FAF2453BA267963FB40DB16 /* SnapConstraints-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AC69F70842433397FFC134D6B90F662 /* SnapConstraints-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		86ED0BBC4F9C270FE9BDF4085197C1BD /* Pods-SnapConstraints_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 540898B4E415970E7DF22C708AFF4DDD /* Pods-SnapConstraints_Example-dummy.m */; };
 		A3B371CDE15B26896D5874F5B6293E82 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
@@ -20,8 +19,6 @@
 		A7AFF2B01EAD730F00DDA367 /* SnapLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AFF2AA1EAD730F00DDA367 /* SnapLog.swift */; };
 		A7AFF2B11EAD730F00DDA367 /* SnapMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AFF2AB1EAD730F00DDA367 /* SnapMask.swift */; };
 		A7AFF2B21EAD730F00DDA367 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AFF2AC1EAD730F00DDA367 /* UIView+Constraints.swift */; };
-		A9FAF87938B8183E563D0EAF678A9BC8 /* Pods-SnapConstraints_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 44527A759BF750817CFB185D56DD547C /* Pods-SnapConstraints_Tests-dummy.m */; };
-		CC3410F623F244AC23E9C877BD00364F /* Pods-SnapConstraints_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 059525320B0FF2CC428C319D0EF976EB /* Pods-SnapConstraints_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +36,6 @@
 		059525320B0FF2CC428C319D0EF976EB /* Pods-SnapConstraints_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SnapConstraints_Tests-umbrella.h"; sourceTree = "<group>"; };
 		0760AFBF7B72441A4F95F57E8476B9D1 /* SnapConstraints.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SnapConstraints.modulemap; sourceTree = "<group>"; };
 		0C280DE9B38CC29252A2EFA42A731ED6 /* Pods-SnapConstraints_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SnapConstraints_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		1CD547C963FAF0D836500CCDC8EE25B1 /* Pods_SnapConstraints_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapConstraints_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		245C29BB8ED53D27DE9A333467107DF5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2483087AE688D4FCE5390E75DC356EFC /* Pods-SnapConstraints_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SnapConstraints_Tests.modulemap"; sourceTree = "<group>"; };
 		2AC69F70842433397FFC134D6B90F662 /* SnapConstraints-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapConstraints-umbrella.h"; sourceTree = "<group>"; };
@@ -88,14 +84,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				37B5776669A1D4BE914134DDC1B19631 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FFC8E36D227BA44B727F3BD595F642AD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				43788EF0392D7CD7203DD181279B5355 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,7 +137,6 @@
 			isa = PBXGroup;
 			children = (
 				A32F375B6094A6C513F2753A093B5BF9 /* Pods_SnapConstraints_Example.framework */,
-				1CD547C963FAF0D836500CCDC8EE25B1 /* Pods_SnapConstraints_Tests.framework */,
 				DFF372C0CECE7AC08688E0EB12146D20 /* SnapConstraints.framework */,
 			);
 			name = Products;
@@ -256,14 +243,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		97056A29E8D54F3CF956DFAD2D7DB4B9 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CC3410F623F244AC23E9C877BD00364F /* Pods-SnapConstraints_Tests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -302,23 +281,6 @@
 			productReference = A32F375B6094A6C513F2753A093B5BF9 /* Pods_SnapConstraints_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		F2202B282B584AFA3C3D0C82438B5872 /* Pods-SnapConstraints_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4B6E1E80D03ED5C4901E097B1589035C /* Build configuration list for PBXNativeTarget "Pods-SnapConstraints_Tests" */;
-			buildPhases = (
-				CCF6EDFCA633AF3366D6B457C5A409B5 /* Sources */,
-				FFC8E36D227BA44B727F3BD595F642AD /* Frameworks */,
-				97056A29E8D54F3CF956DFAD2D7DB4B9 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-SnapConstraints_Tests";
-			productName = "Pods-SnapConstraints_Tests";
-			productReference = 1CD547C963FAF0D836500CCDC8EE25B1 /* Pods_SnapConstraints_Tests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -346,7 +308,6 @@
 			projectRoot = "";
 			targets = (
 				D26AB604E84B17BAD3AA44E5FC5F8862 /* Pods-SnapConstraints_Example */,
-				F2202B282B584AFA3C3D0C82438B5872 /* Pods-SnapConstraints_Tests */,
 				AB7DF44781B795F0A54F6F70DA928B47 /* SnapConstraints */,
 			);
 		};
@@ -372,14 +333,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				86ED0BBC4F9C270FE9BDF4085197C1BD /* Pods-SnapConstraints_Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CCF6EDFCA633AF3366D6B457C5A409B5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A9FAF87938B8183E563D0EAF678A9BC8 /* Pods-SnapConstraints_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,42 +520,6 @@
 			};
 			name = Debug;
 		};
-		6401A04898BA2645E8C8337C165B4C51 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 31DED0F1ACD4351BDDADA876020CAAA9 /* Pods-SnapConstraints_Tests.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-SnapConstraints_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SnapConstraints_Tests/Pods-SnapConstraints_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_SnapConstraints_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		717E77604BFBB04BEAF56608A1CB2EDE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -656,42 +573,6 @@
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
-		};
-		744689C615E5473E9B28BF7899232134 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0C280DE9B38CC29252A2EFA42A731ED6 /* Pods-SnapConstraints_Tests.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-SnapConstraints_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SnapConstraints_Tests/Pods-SnapConstraints_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_SnapConstraints_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		7A5A7489A03729F0B00788CB08A00FAE /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -747,15 +628,6 @@
 			buildConfigurations = (
 				23480E0A8B906DC1361425089584C489 /* Debug */,
 				1570BF9DFBE55223BE2E809E1EF399A8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4B6E1E80D03ED5C4901E097B1589035C /* Build configuration list for PBXNativeTarget "Pods-SnapConstraints_Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				744689C615E5473E9B28BF7899232134 /* Debug */,
-				6401A04898BA2645E8C8337C165B4C51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

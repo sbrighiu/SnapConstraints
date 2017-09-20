@@ -30,8 +30,6 @@
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		B48DE8E3BE183B1B2D0E2A7A /* Pods-SnapConstraints_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapConstraints_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapConstraints_Example/Pods-SnapConstraints_Example.release.xcconfig"; sourceTree = "<group>"; };
-		FB9D4B741BED132138586B8C /* Pods-SnapConstraints_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapConstraints_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapConstraints_Tests/Pods-SnapConstraints_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		FFA1463339F300062B9F4F4F /* Pods-SnapConstraints_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapConstraints_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapConstraints_Tests/Pods-SnapConstraints_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,8 +109,6 @@
 			children = (
 				08E106F34F7C547657A941A8 /* Pods-SnapConstraints_Example.debug.xcconfig */,
 				B48DE8E3BE183B1B2D0E2A7A /* Pods-SnapConstraints_Example.release.xcconfig */,
-				FB9D4B741BED132138586B8C /* Pods-SnapConstraints_Tests.debug.xcconfig */,
-				FFA1463339F300062B9F4F4F /* Pods-SnapConstraints_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
