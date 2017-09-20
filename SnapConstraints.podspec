@@ -51,6 +51,8 @@ ALL YOU NEED TO DO IS .snap ;). Now working with Swift 4.
   # s.dependency 'AFNetworking', '~> 2.3'
 end
 
-
+# echo "4.0" > .swift-version
 # Check lint:   pod spec lint SnapConstraints.podspec
+# pod trunk register smbcheeky@gmail.com
 # Push:         pod trunk push
+
