@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SnapConstraints'
-  s.version          = '1.0.1'
+  s.version          = '1.0.2'
   s.summary          = 'A lightweight library for working with constraints programatically.'
 
 # This description is used to generate tags and improve search results.
