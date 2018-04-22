@@ -53,6 +53,8 @@ end
 
 # echo "4.0" > .swift-version
 # Check lint:   pod spec lint SnapConstraints.podspec
+# add tag with version
+# push
 # pod trunk register smbcheeky@gmail.com
 # Push:         pod trunk push
 
