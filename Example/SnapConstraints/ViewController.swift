@@ -74,7 +74,7 @@ class ViewController: UIViewController {
         view7.backgroundColor = .orange
         view7.tag = 7
         self.view.addSubview(view7)
-        self.view.bringSubview(toFront: view7)
+        self.view.bringSubviewToFront(view7)
         
         _ = view7.snap.bottom(with: 20, to: view1).top(with: 20).leading(with: 20).trailing(with: 20)
         

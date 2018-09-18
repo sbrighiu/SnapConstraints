@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SnapConstraints'
-  s.version          = '1.0.2'
+  s.version          = '1.0.3'
   s.summary          = 'A lightweight library for working with constraints programatically.'
 
 # This description is used to generate tags and improve search results.
@@ -51,7 +51,7 @@ ALL YOU NEED TO DO IS .snap ;). Now working with Swift 4.
   # s.dependency 'AFNetworking', '~> 2.3'
 end
 
-# echo "4.0" > .swift-version
+# echo "4.2" > .swift-version
 # Check lint:   pod spec lint SnapConstraints.podspec
 # add tag with version
 # push
