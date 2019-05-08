@@ -8,8 +8,6 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
-
 ## Installation
 
 SnapConstraints is available through [CocoaPods](http://cocoapods.org). To install
@@ -18,6 +16,12 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod "SnapConstraints"
 ```
+
+## Description
+
+Just use `.snap` on any UIView subclass and choose from simple options like `.bottom` , `.top`, `.below` or a bit more complex options like masks `.snap.mask([.fill])`.
+
+All options will automatically activate the constraint/s and will return the last set constraint.
 
 ## Author
 
