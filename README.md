@@ -21,6 +21,9 @@ pod "SnapConstraints"
 
 Just use `.snap` on any UIView subclass and choose from simple options like `.bottom` , `.top`, `.below` or a bit more complex options like masks `.snap.mask([.fill])`.
 
+To snap to the superview's safeArea use `.leadingToSafeArea`, `.topToSafeArea`, `.bottomToSafeArea`, `.trailingToSafeArea`. 
+These constraints cannot be stacked or present in current masks like the rest because they are simple constraints.
+
 All options will automatically activate the constraint/s and will return the last set constraint.
 
 ## Author

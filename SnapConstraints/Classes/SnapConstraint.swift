@@ -5,12 +5,7 @@
 
 import UIKit
 
-/// Custom NSLayoutConstraint object type for a more productive developing flow.
-final public class SnapConstraint: NSLayoutConstraint {
-    
-    /// A type for the SnapConstraint object.
-    public var type = SnapConstraintType.undefined
-    
+extension NSLayoutConstraint {
     /// A custom tag for the constraint. It uses the less know .identifier of NSLayoutConstraint.
     public var tag: String {
         get {
@@ -20,6 +15,43 @@ final public class SnapConstraint: NSLayoutConstraint {
             self.identifier = newValue
         }
     }
+}
+
+private extension UIView {
+    var safeTopAnchor: NSLayoutYAxisAnchor {
+        if #available(iOS 11.0, *) {
+            return self.safeAreaLayoutGuide.topAnchor
+        }
+        return self.topAnchor
+    }
+    
+    var safeLeadingAnchor: NSLayoutXAxisAnchor {
+        if #available(iOS 11.0, *){
+            return self.safeAreaLayoutGuide.leadingAnchor
+        }
+        return self.leadingAnchor
+    }
+    
+    var safeTrailingAnchor: NSLayoutXAxisAnchor {
+        if #available(iOS 11.0, *){
+            return self.safeAreaLayoutGuide.trailingAnchor
+        }
+        return self.trailingAnchor
+    }
+    
+    var safeBottomAnchor: NSLayoutYAxisAnchor {
+        if #available(iOS 11.0, *) {
+            return self.safeAreaLayoutGuide.bottomAnchor
+        }
+        return self.bottomAnchor
+    }
+}
+
+/// Custom NSLayoutConstraint object type for a more productive developing flow.
+final public class SnapConstraint: NSLayoutConstraint {
+    
+    /// A type for the SnapConstraint object.
+    public var type = SnapConstraintType.undefined
     
     /// Attributes a code to each view reaches the description computed variable. If a view has a tag, 
     /// it will use that tag and mark it with a '*' instead of a '-'.
@@ -64,40 +96,8 @@ final public class SnapConstraint: NSLayoutConstraint {
     /// - Returns: The new description string.
     private func createDescriptionString(withEndline: Bool) -> String {
         guard let firstView = self.firstView else { return "<SnapConstraint(invalid)>" }
-        var firstViewDescription: String
         
-        switch firstView {
-        case is UIButton:                   firstViewDescription = "UIButton"
-        case is UILabel:                    firstViewDescription = "UILabel"
-        case is UISegmentedControl:         firstViewDescription = "UISegmentedControl"
-        case is UITextField:                firstViewDescription = "UITextField"
-        case is UISlider:                   firstViewDescription = "UISlider"
-        case is UISwitch:                   firstViewDescription = "UISwitch"
-        case is UIActivityIndicatorView:    firstViewDescription = "UIActivityIndicatorView"
-        case is UIProgressView:             firstViewDescription = "UIProgressView"
-        case is UIPageControl:              firstViewDescription = "UIPageControl"
-        case is UIStackView:                firstViewDescription = "UIStackView"
-        case is UITableView:                firstViewDescription = "UITableView"
-        case is UITableViewCell:            firstViewDescription = "UITableViewCell"
-        case is UIImageView:                firstViewDescription = "UIImageView"
-        case is UICollectionView:           firstViewDescription = "UICollectionView"
-        case is UICollectionViewCell:       firstViewDescription = "UICollectionViewCell"
-        case is UICollectionReusableView:   firstViewDescription = "UICollectionReusableView"
-        case is UITextView:                 firstViewDescription = "UITextView"
-        case is UIScrollView:               firstViewDescription = "UIScrollView"
-        case is UIDatePicker:               firstViewDescription = "UIDatePicker"
-        case is UIPickerView:               firstViewDescription = "UIPickerView"
-        case is UIVisualEffectView:         firstViewDescription = "UIVisualEffectView"
-        case is UIWebView:                  firstViewDescription = "UIWebView"
-        case is UINavigationBar:            firstViewDescription = "UINavigationBar"
-        case is UIToolbar:                  firstViewDescription = "UIToolbar"
-        case is UITabBar:                   firstViewDescription = "UITabBar"
-        case is UISearchBar:                firstViewDescription = "UISearchBar"
-        default:                            firstViewDescription = String(describing: Swift.type(of: firstView))
-        }
-        
-        firstViewDescription = String(describing: Swift.type(of: firstView))
-        
+        var firstViewDescription = String(describing: Swift.type(of: firstView))
         var key: Int
         var keyString = ""
         
@@ -178,16 +178,64 @@ final public class SnapConstraint: NSLayoutConstraint {
     
     /// Wrapper for the 
     public var firstView: UIView? {
-        switch self.firstItem {
-        case is UILabel: return self.firstItem as? UILabel
-        case is UIButton: return self.firstItem as? UIButton
-        default:
-            return self.firstItem as? UIView
-        }
+        return self.firstItem as? UIView
     }
     
     public var secondView: UIView? {
-        return (self.secondItem as? UIView)
+        return self.secondItem as? UIView
+    }
+    
+    // MARK: - Safe area
+    public var leadingToSafeArea: NSLayoutConstraint? {
+        return leadingToSafeArea(with: 0, line: #line, file: #file)
+    }
+    
+    @discardableResult public func leadingToSafeArea(with constant: CGFloat, priority: Float = 1000, relation: NSLayoutConstraint.Relation = .equal, line: Int = #line, file: String = #file) -> NSLayoutConstraint? {
+        guard let firstView = self.firstView, let secondView = firstView.superview else { return nil }
+        
+        return SnapConstraint.snapConstraintToSafeArea(firstAnchor: firstView.leadingAnchor, secondAnchor: secondView.safeLeadingAnchor, constant: constant, priority: priority, relation: relation, line: #line, file: #file)
+    }
+    
+    public var trailingToSafeArea: NSLayoutConstraint? {
+        return trailingToSafeArea(with: 0, line: #line, file: #file)
+    }
+    
+    @discardableResult public func trailingToSafeArea(with constant: CGFloat, priority: Float = 1000, relation: NSLayoutConstraint.Relation = .equal, line: Int = #line, file: String = #file) -> NSLayoutConstraint? {
+        guard let firstView = self.firstView, let secondView = firstView.superview else { return nil }
+        
+        return SnapConstraint.snapConstraintToSafeArea(firstAnchor: firstView.trailingAnchor, secondAnchor: secondView.safeTrailingAnchor, constant: constant, priority: priority, relation: relation, line: #line, file: #file)
+    }
+    
+    public var bottomToSafeArea: NSLayoutConstraint? {
+        return bottomToSafeArea(with: 0, line: #line, file: #file)
+    }
+    
+    @discardableResult public func bottomToSafeArea(with constant: CGFloat, priority: Float = 1000, relation: NSLayoutConstraint.Relation = .equal, line: Int = #line, file: String = #file) -> NSLayoutConstraint? {
+        guard let firstView = self.firstView, let secondView = firstView.superview else { return nil }
+        
+        return SnapConstraint.snapConstraintToSafeArea(firstAnchor: firstView.bottomAnchor, secondAnchor: secondView.safeBottomAnchor, constant: constant, priority: priority, relation: relation, line: #line, file: #file)
+    }
+    
+    public var topToSafeArea: NSLayoutConstraint? {
+        return topToSafeArea(with: 0, line: #line, file: #file)
+    }
+    
+    @discardableResult public func topToSafeArea(with constant: CGFloat, priority: Float = 1000, relation: NSLayoutConstraint.Relation = .equal, line: Int = #line, file: String = #file) -> NSLayoutConstraint? {
+        guard let firstView = self.firstView, let secondView = firstView.superview else { return nil }
+        
+        return SnapConstraint.snapConstraintToSafeArea(firstAnchor: firstView.topAnchor, secondAnchor: secondView.safeTopAnchor, constant: constant, priority: priority, relation: relation, line: #line, file: #file)
+    }
+    
+    @discardableResult private static func snapConstraintToSafeArea<T>(firstAnchor: NSLayoutAnchor<T>, secondAnchor: NSLayoutAnchor<T>, constant: CGFloat, priority: Float = 1000, relation: NSLayoutConstraint.Relation = .equal, line: Int = #line, file: String = #file) -> NSLayoutConstraint {
+        var constraint: NSLayoutConstraint
+        switch relation {
+        case .greaterThanOrEqual:   constraint = firstAnchor.constraint(greaterThanOrEqualTo: secondAnchor, constant: constant)
+        case .lessThanOrEqual:      constraint = firstAnchor.constraint(lessThanOrEqualTo: secondAnchor, constant: constant)
+        default:                    constraint = firstAnchor.constraint(equalTo: secondAnchor, constant: constant)
+        }
+        constraint.priority = UILayoutPriority(priority)
+        constraint.isActive = true
+        return constraint
     }
     
     // MARK: - 
@@ -483,7 +531,7 @@ final public class SnapConstraint: NSLayoutConstraint {
     ///   - file: Remembers the #file the method was called from.
     @discardableResult public func ratioHW(of multiplier: CGFloat = 1, with constant: CGFloat = 0, to secondView: UIView? = nil, priority: Float = 1000, relation: NSLayoutConstraint.Relation = .equal, line: Int = #line, file: String = #file) -> SnapConstraint {
         guard let firstView = self.firstView else { return SnapConstraint.object(type) }
-
+        
         return SnapConstraint.snapConstraint(.ratioHW, with: constant, pointsFrom: firstView, to: secondView, priority: priority, multiplier: multiplier, relation: relation, line: line, file: file)
     }
     

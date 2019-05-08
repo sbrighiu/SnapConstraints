@@ -1,6 +1,0 @@
-framework module Pods_SnapConstraints_Tests {
-  umbrella header "Pods-SnapConstraints_Tests-umbrella.h"
-
-  export *
-  module * { export * }
-}

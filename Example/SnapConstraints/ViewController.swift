@@ -29,9 +29,9 @@ class ViewController: UIViewController {
         self.view.addSubview(view3)
         
         //        _ = view1.snap.leading.trailing.top(with: 100).height (equalTo: view2, with: 0, multiplier: 0.5)
-        view1.snap.mask(.fillHorizontally).mask(.top, with: 100).height(equalTo: view2, with: 0, multiplier: 0.5)
-        view2.snap.leading.left(of: view3).below(view1).bottom(with: 0, priority: 999)
-        view3.snap.bottom.right(of: view2).height(equalTo: view2, with: 0).trailing.width(equalTo: view2, with: 0, multiplier: 0.5)
+        _ = view1.snap.mask(.fillHorizontally).height(equalTo: view2, with: 0, multiplier: 0.5).topToSafeArea
+        _ = view2.snap.leading.left(of: view3).below(view1).bottomToSafeArea(with: 0, priority: 999)
+        view3.snap.bottom.right(of: view2).top(with: 0, to: view2).trailing.width(equalTo: view2, with: 0, multiplier: 0.5)
         view1.snap.leading.tag = "Hello"
         
         print(view.snaps)
@@ -92,11 +92,11 @@ class ViewController: UIViewController {
         
         view9.snap.mask(.fill, with: 8)
         
-        let view10 = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        let view10 = CustomButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
         view10.backgroundColor = UIColor.darkGray
         view10.tag = 10
         view10.setTitleColor(.white, for: .normal)
-        view10.setTitle("Hellow", for: .normal)
+        view10.setTitle("Yellow", for: .normal)
         view3.addSubview(view10)
         
         view10.snap.mask(.trailing, .leading, with: 16, to: view9).mask(.fillVertically, with: 8).tag = "Hey"        
@@ -122,3 +122,4 @@ class ViewController: UIViewController {
 
 }
 
+class CustomButton: UIButton { }

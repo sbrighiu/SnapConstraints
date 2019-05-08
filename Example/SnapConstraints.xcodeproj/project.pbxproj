@@ -18,7 +18,7 @@
 /* Begin PBXFileReference section */
 		0754A7C6B7DA67936105609D /* Pods_SnapConstraints_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapConstraints_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		08E106F34F7C547657A941A8 /* Pods-SnapConstraints_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapConstraints_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapConstraints_Example/Pods-SnapConstraints_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		16886555AB96A2FFD0FB86F7 /* SnapConstraints.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SnapConstraints.podspec; path = ../SnapConstraints.podspec; sourceTree = "<group>"; };
+		16886555AB96A2FFD0FB86F7 /* SnapConstraints.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SnapConstraints.podspec; path = ../SnapConstraints.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		3E589BFC0B0FA74C17B25B98 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		4FBE44943B9AE726F9759022 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		5668752229456338074121F4 /* Pods_SnapConstraints_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapConstraints_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,7 +125,6 @@
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				59A03676875C8C7E81BDBC4F /* [CP] Embed Pods Frameworks */,
-				AE4B7BDF795841BC5790BBE7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -191,13 +190,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SnapConstraints_Example/Pods-SnapConstraints_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapConstraints/SnapConstraints.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapConstraints.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SnapConstraints_Example/Pods-SnapConstraints_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SnapConstraints_Example/Pods-SnapConstraints_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5F8E32434AED591B73E079BF /* [CP] Check Pods Manifest.lock */ = {
@@ -206,28 +208,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SnapConstraints_Example-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		AE4B7BDF795841BC5790BBE7 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SnapConstraints_Example/Pods-SnapConstraints_Example-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
